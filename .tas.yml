@@ -24,6 +24,8 @@ postRun:
   command:
     - yarn --version
 
+nodeVersion: 12.13.1
+
 # configure whether to smartSelect test-cases. Default true
 smartRun: true
 

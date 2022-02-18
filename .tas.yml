@@ -1,0 +1,37 @@
+---
+# supported frameworks: mocha|jest|jasmine
+framework: mocha
+
+preRun:
+  # set of commands to run before running the tests like `yarn install`, `yarn build`
+  command:
+    # change the command according to the package manager being used in the repository.
+    # For eg, npm ci, yarn install or any other command used to fetch node modules
+    - yarn
+
+postMerge:
+  pattern:
+    # regex pattern to discover tests to run in case of postMerge
+    - "**/*-test.ts"
+
+preMerge:
+  pattern:
+    # regex pattern to discover tests to run in case of premerge
+    - "**/*-test.ts"
+
+postRun:
+  # set of commands to run after running the tests
+  command:
+    - yarn --version
+
+# configure whether to smartSelect test-cases. Default true
+smartRun: true
+
+# supported tiers: xsmall|small|medium|large|xlarge
+tier: small
+
+# number of parallel instances of containers to spawned to distribute test execution
+parallelism: 2
+
+# version of tas file intended to be used in order to issue warnings for deprecation or breaking changes
+version: 1.0

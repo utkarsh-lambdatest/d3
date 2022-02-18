@@ -12,12 +12,12 @@ preRun:
 postMerge:
   pattern:
     # regex pattern to discover tests to run in case of postMerge
-    - "test/**/*-test.js"
+    - "test/**/*-test.mjs"
 
 preMerge:
   pattern:
     # regex pattern to discover tests to run in case of premerge
-    - "test/**/*-test.js"
+    - "test/**/*-test.mjs"
 
 postRun:
   # set of commands to run after running the tests

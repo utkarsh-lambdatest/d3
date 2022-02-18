@@ -24,6 +24,7 @@ postRun:
   command:
     - yarn --version
 
+configFile: .mocharc.yaml
 
 # configure whether to smartSelect test-cases. Default true
 smartRun: true
